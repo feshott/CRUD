@@ -1,28 +1,36 @@
-.App {
-  text-align: center;
+.message_wrapper{
+  position: relative;
+  width: 900px;
+  margin: 60px auto;
+  border-radius: 10px;
+  background: gold;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
+.message_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  background: violet;
+  margin: 0 auto;
+}
+.input_message_name{
+  width: 450px;
   height: 80px;
+  resize: none; 
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.input_message_text{
+  width: 450px;
+  height: 80px;
+  resize: none; 
 }
-
-.App-title {
-  font-size: 1.5em;
+.message_add_btn{
+  margin: 10px;
+  width: 140px;
+  height: 40px;
+  background: skyblue;
+  border-radius: 20px;
 }
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+h3{
+  margin: 5px;
 }

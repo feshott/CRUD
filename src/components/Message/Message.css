@@ -1,0 +1,28 @@
+.message_delete{
+  margin: 10px;
+  width: 140px;
+  height: 40px;
+  background: skyblue;
+  border-radius: 20px;
+}
+.message{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: gainsboro;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+.message_name{
+  text-align: center;
+  margin: 5px;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.message_text{
+  margin: 5px;
+}
+.message_number{
+  margin: 5px;
+}
