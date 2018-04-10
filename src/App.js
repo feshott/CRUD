@@ -8,24 +8,16 @@ class App extends Component {
   constructor(){
     super()
     this.state={
-      allMessage:[
-        {
-          messageName:'name_1',
-          messageText:'text_1',
-          messageNumber:'111 111 111'
-        },
-        { 
-          messageName:'name_2',
-          messageText:'text_2',
-          messageNumber:'222 222 222'
-         },
-        { 
-          messageName:'name_3',
-          messageText:'text_3',
-          messageNumber:'333 333 333'
-         }
-      ]
+      allMessage:[]
     }
+  }
+
+  componentWillMount(){
+
+    let arrAllMessage = JSON.parse(localStorage.getItem('message'))
+    this.setState({
+      allMessage : arrAllMessage
+    })
   }
 
   addMessage=(object)=>{
@@ -35,6 +27,7 @@ class App extends Component {
       allMessage: arrAllMessage
     })
   //  console.log(object)
+    localStorage.setItem('message',JSON.stringify(arrAllMessage))
   }
 
   removeMessage=(object)=>{
@@ -44,6 +37,7 @@ class App extends Component {
       allMessage: arrAllMessage
     })
   //  console.log(object)
+  localStorage.setItem('message',JSON.stringify(arrAllMessage))
   }
 
   render() {
