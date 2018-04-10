@@ -64,7 +64,7 @@ export default class MessageForm extends Component {
         
         <h3>Ваш город</h3>
         <select size='1' onChange={this.setMessageSity}>
-          <option selected disabled>Выберите город</option>
+          <option disabled>Выберите город</option>
           {SityList.map((item,i)=>{
             return  <option key={i}>{item}</option>
           })}

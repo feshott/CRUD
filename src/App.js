@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Message from './components/Message/Message'
 import MessageForm from './components/MessageForm/MessageForm'
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
