@@ -24,7 +24,6 @@ class App extends Component {
     this.setState({
       allMessage: arrAllMessage
     })
-  //  console.log(object)
     localStorage.setItem('message',JSON.stringify(arrAllMessage))
   }
 
@@ -34,19 +33,14 @@ class App extends Component {
     this.setState({
       allMessage: arrAllMessage
     })
-  //  console.log(object)
-  localStorage.setItem('message',JSON.stringify(arrAllMessage))
+    localStorage.setItem('message',JSON.stringify(arrAllMessage))
   }
 
   render() {
-
     const { allMessage } = this.state
-
     return (
       <div className="App">
-
         <div className="message_wrapper">
-
           {allMessage.map((item,i)=>{
             return <Message messageFunction = {this.removeMessage}
                             messageName = {item.messageName} 
@@ -57,11 +51,8 @@ class App extends Component {
                             key={i}
                     />
           })}
-
         </div>
-        
         <MessageForm messageFormFunction={this.addMessage}/>
-
       </div>
     );
   }
