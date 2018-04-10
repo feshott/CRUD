@@ -5,32 +5,3 @@
   border-radius: 10px;
   background: gold;
 }
-.message_form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 900px;
-  background: violet;
-  margin: 0 auto;
-}
-.input_message_name{
-  width: 450px;
-  height: 80px;
-  resize: none; 
-}
-.input_message_text{
-  width: 450px;
-  height: 80px;
-  resize: none; 
-}
-.message_add_btn{
-  margin: 10px;
-  width: 140px;
-  height: 40px;
-  background: skyblue;
-  border-radius: 20px;
-}
-h3{
-  margin: 5px;
-}
