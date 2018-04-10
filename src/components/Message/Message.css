@@ -15,7 +15,7 @@
   font-size: 1rem;
   font-family: sans-serif;
 }
-.message_text,.message_number{
+.message_text,.message_number,message_sity{
   margin: 5px;
   font-size: .85rem;
 }

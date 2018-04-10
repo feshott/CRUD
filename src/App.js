@@ -13,7 +13,6 @@ class App extends Component {
   }
 
   componentWillMount(){
-
     let arrAllMessage = JSON.parse(localStorage.getItem('message'))
     this.setState({
       allMessage : arrAllMessage
@@ -54,6 +53,7 @@ class App extends Component {
                             messageName = {item.messageName} 
                             messageText = {item.messageText}
                             messageNumber = {item.messageNumber}
+                            messageSity = {item.messageSity}
                             messageIndex ={i}
                             key={i}
                     />

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SityList from '../SityList'
 import './MessageForm.css';
 
 export default class MessageForm extends Component {
@@ -7,7 +8,8 @@ export default class MessageForm extends Component {
     this.state={
       messageName : '',
       messageText : '',
-      messageNumber : ''
+      messageNumber : '',
+      messageSity: ''
     }
   }
 
@@ -28,6 +30,22 @@ export default class MessageForm extends Component {
       messageNumber: event.target.value
     })
   }
+
+  setMessageSity=(event)=>{
+    this.setState({
+      messageSity: event.target.value
+    })
+  }
+
+  submitForm=()=>{
+    this.props.messageFormFunction(this.state)
+    this.setState({
+      messageName:'',
+      messageText: '',
+      messageNumber: '',
+      messageSity: ''
+    })
+  }
     
   render(){
     const{messageName,messageText,messageNumber} = this.state
@@ -43,8 +61,16 @@ export default class MessageForm extends Component {
 
         <h3>Ваш номер</h3>
         <input type="tel" className='input_message_number' value={messageNumber} onChange={this.setMessageNumber} maxLength="10" placeholder='(999)222-22-22'/>
-       
-        <button className='message_add_btn' onClick={(messageName && messageNumber) ? (()=>this.props.messageFormFunction(this.state)) : null}>Создать обьявление</button>
+        
+        <h3>Ваш город</h3>
+        <select size='1' onChange={this.setMessageSity}>
+          <option selected disabled>Выберите город</option>
+          {SityList.map((item,i)=>{
+            return  <option key={i}>{item}</option>
+          })}
+        </select>
+
+        <button className='message_add_btn' onClick={(messageName && messageNumber) ? (this.submitForm) : null}>Создать обьявление</button>
 
       </div>
     )
