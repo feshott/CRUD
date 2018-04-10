@@ -1,28 +1,29 @@
-.message_delete{
-  margin: 10px;
-  width: 140px;
-  height: 40px;
-  background: skyblue;
-  border-radius: 20px;
-}
 .message{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: gainsboro;
   text-align: center;
-  border-bottom: 2px solid black;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  border-bottom: 1px solid black;
+  background: rgb(206, 214, 237);
 }
 .message_name{
   text-align: center;
   margin: 5px;
-  font-size: 20px;
+  font-size: 1rem;
   font-family: sans-serif;
 }
-.message_text{
+.message_text,.message_number{
   margin: 5px;
+  font-size: .85rem;
 }
-.message_number{
-  margin: 5px;
+
+.message_delete{
+  margin: 10px;
+  width: 140px;
+  height: 40px;
+  background: white;
+  border-radius: 20px;
 }
