@@ -18,7 +18,7 @@ class App extends Component {
         allMessage : arrAllMessage
       })
     }
-    
+    console.log(this.state.arrAllMessage)
   }
 
   addMessage=(object)=>{
@@ -49,7 +49,7 @@ class App extends Component {
                             messageName = {item.messageName} 
                             messageText = {item.messageText}
                             messageNumber = {item.messageNumber}
-                            messageSity = {item.messageSity}
+                            messageCity = {item.messageCity}
                             messageIndex ={i}
                             key={i}
                     />

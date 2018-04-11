@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SityList from '../SityList'
+import СityList from '../СityList'
 import './MessageForm.css';
 
 export default class MessageForm extends Component {
@@ -9,7 +9,7 @@ export default class MessageForm extends Component {
       messageName : '',
       messageText : '',
       messageNumber : '',
-      messageSity: ''
+      messageСity: ''
     }
   }
 
@@ -32,9 +32,9 @@ export default class MessageForm extends Component {
     })
   }
 
-  setMessageSity=(event)=>{
+  setMessageСity=(event)=>{
     this.setState({
-      messageSity: event.target.value
+      messageСity: event.target.value
     })
   }
 
@@ -44,7 +44,7 @@ export default class MessageForm extends Component {
       messageName:'',
       messageText: '',
       messageNumber: '',
-      messageSity: ''
+      messageСity: ''
     })
   }
     
@@ -64,9 +64,9 @@ export default class MessageForm extends Component {
         <input type="tel" className='input_message_number' value={messageNumber} onChange={this.setMessageNumber} maxLength="10" placeholder='(999)222-22-22'/>
         
         <h3>Ваш город</h3>
-        <select size='1' onChange={this.setMessageSity}>
+        <select size='1' onChange={this.setMessageСity}>
           <option disabled>Выберите город</option>
-          {SityList.map((item,i)=>{
+          {СityList.map((item,i)=>{
             return  <option key={i}>{item}</option>
           })}
         </select>
