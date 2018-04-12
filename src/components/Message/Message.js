@@ -13,7 +13,7 @@ export default class Message extends Component {
 
         <p className="message_number">{messageNumber}</p>
 
-        {messageCity && <p className="message_sity">{messageCity}</p>}
+         <p className="message_city">{messageCity}</p>
 
         <button className="message_delete" onClick={()=>this.props.messageFunction(messageIndex)}>Удалить обьявление</button>
       </div>

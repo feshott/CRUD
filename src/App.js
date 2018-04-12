@@ -18,25 +18,26 @@ class App extends Component {
         allMessage : arrAllMessage
       })
     }
-    console.log(this.state.arrAllMessage)
   }
 
-  addMessage=(object)=>{
-    let arrAllMessage = this.state.allMessage
-    arrAllMessage.push(object)
+  addMessage=(nowMessage)=>{
+    console.log(nowMessage)
+    const oldAllMessage = this.state.allMessage
+    const newAllMessage = [...oldAllMessage, nowMessage]
     this.setState({
-      allMessage: arrAllMessage
+      allMessage: newAllMessage
     })
-    localStorage.setItem('message',JSON.stringify(arrAllMessage))
+    localStorage.setItem('message',JSON.stringify(newAllMessage))
   }
 
   removeMessage=(object)=>{
-    let arrAllMessage = this.state.allMessage
-    arrAllMessage.splice(object, 1)
+    const oldAllMessage = this.state.allMessage
+    // const newAllMessage = oldAllMessage.splice(object, 1)
+    const newAllMessage = [...oldAllMessage.slice(0, object), ...oldAllMessage.slice(object + 1)];
     this.setState({
-      allMessage: arrAllMessage
+      allMessage: newAllMessage
     })
-    localStorage.setItem('message',JSON.stringify(arrAllMessage))
+    localStorage.setItem('message',JSON.stringify(newAllMessage))
   }
 
   render() {
@@ -49,7 +50,7 @@ class App extends Component {
                             messageName = {item.messageName} 
                             messageText = {item.messageText}
                             messageNumber = {item.messageNumber}
-                            messageCity = {item.messageCity}
+                            messageCity = {item.messageСity}
                             messageIndex ={i}
                             key={i}
                     />

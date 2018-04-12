@@ -12,12 +12,12 @@
 .message_name{
   text-align: center;
   margin: 5px;
-  font-size: 1rem;
+  font-size: 16px;
   font-family: sans-serif;
 }
-.message_text,.message_number,message_sity{
+.message_text,.message_number,message_city{
   margin: 5px;
-  font-size: .85rem;
+  font-size: 13px;
 }
 .message_delete{
   margin: 10px;
